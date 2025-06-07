@@ -1,4 +1,7 @@
-const api_URL='https://sophie-bluel-backend-hrep.onrender.com'
+const apiBaseUrl = window.location.hostname.includes("github.io")
+  ? "https://sophie-bluel-backend-hrep.onrender.com"
+  : "http://localhost:5678";
+const api_URL = apiBaseUrl;
 
 /*****Fontions générales */
 async function getProjects() {

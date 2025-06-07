@@ -1,9 +1,14 @@
 
+
 import * as fonction from './fonctions.js'
+
+const apiBaseUrl = window.location.hostname.includes("github.io")
+  ? "https://sophie-bluel-backend-hrep.onrender.com"
+  : "http://localhost:5678";
 
 /***** Déclaration variables et constantes *****/
 
-const api_URL='https://sophie-bluel-backend-hrep.onrender.com'
+const api_URL = apiBaseUrl;
 // Envoi d'un fetch pour récup. des travaux sur l'API
 const respProjects=await fetch(`${api_URL}/api/works`)
 const projects=await respProjects.json()
