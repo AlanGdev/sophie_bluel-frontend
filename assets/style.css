@@ -1,0 +1,320 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+	background-color:#FFFEF8;/**/
+
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#filters{
+	width: 585px;
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.filter-btn{
+	min-width: 100px;
+	color:#1D6154;
+	background-color:#FFFEF8;
+	font-weight: 700;
+	border: #1D6154 solid 1px;
+	border-radius: 60px;
+}
+
+.filter-btn-clicked{
+	min-width: 100px;
+	color:#FFFEF8;
+	background-color:#1D6154;
+	font-weight: 700;
+	border: #1D6154 solid 1px;
+	border-radius: 60px;
+
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	margin-top: 50px;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+#contact, #connexion{
+	width: 50%;
+margin: auto;
+}
+#contact, #connexion > * {
+	text-align: center;
+
+}
+#contact h2, #connexion h2{
+	margin-bottom: 20px;
+}
+#contact form, #connexion form{
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input, #connexion input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label, #connexion label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#connexion h2{
+	margin-top:150px;
+}
+#connexion a{
+	display: block;
+	margin: auto;
+	color: #3D3D3D;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+#login{
+	font-weight:600;
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+.bg-footer{/**/
+	/*Cette class sert à mettre une couleur de fond sur toute la largeur de la page */
+	width: 100vw;
+    background-color:#ffffff;
+    position: absolute;
+    left:0;
+
+
+}
+footer{
+	max-width: 1140px;/* idem body*/
+	margin: auto;/* centrage sur .bg-footer*/
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em;
+	font-weight:300;/* conformément à la maquette*/
+
+}
+
+#bg-footer{/*Footer page de connexion pour positionnement bas de page*/
+	position: absolute;
+	bottom: 0;
+}
+
+.alert{
+	background-color: red;
+	color: white;
+	font-weight: 700;
+	padding: 10px;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+#edition-mode{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	height: 59px;
+	font-size: 16px;
+	color: white;
+	background-color: black;
+	font-weight: 700;
+	text-align: center;
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	top:0
+}
+.marge-top-110{
+	margin-top: 110px;
+}
+#mes-projets{
+	position:relative;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	align-items:baseline;
+}
+#modifier{
+	display: flex;
+	font-size: 14px;
+	gap: 1em;
+	border: 0;
+	padding: 0;
+	background-color: #FFFEF8;
+	transition: opacity 300ms ease-out;  
+}
+#modifier i{
+	font-size: 15.5px;
+}
+#modifier:active{
+	opacity:0;
+}
+
+.hidden{
+	display: none !important;
+}
+
+#modale form{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
